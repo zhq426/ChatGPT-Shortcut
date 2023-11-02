@@ -35,7 +35,7 @@ AiShort provides a concise and easy-to-use list of AI instructions. Even without
 
 🗳️ **Community voting system**: Similar to Product Hunt or Reddit, the platform is community-driven. The best prompts will be pushed to the homepage.
 
-📦 **Ready to use**: Just visit <https://www.aishort.top/en/> to start using.
+📦 **Ready to use**: Just visit https://www.aishort.top/en/ to start using.
 
 The source of AiShort prompts includes internet selections, community shares, and [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts). We will regularly update to provide you with new prompts and inspiration. To understand how to use AiShort, please refer to [user manual](https://www.aishort.top/en/docs/guides/getting-started).
 
@@ -97,3 +97,14 @@ Once you have forked the project, due to GitHub restrictions, it is necessary to
 If you wish to manually update immediately, you can refer to [GitHub's documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize the forked project with the upstream code.
 
 Feel free to show support for this project by giving it a star/follow, or by following the author, to stay informed about timely notifications regarding new feature updates.
+
+## Modification Information
+
+AI Short is an open-source project, affording you the liberty to make alterations to the nomenclature and explication of the website.
+
+- To amend the appellation of the page, please peruse the `docusaurus.config.js` document.
+- For the modification of usage directives, navigate to the `docs` directory.
+- To tailor the cues, you may find them within `src/data/prompt.json`. If you require alteration solely for a particular language, such as Chinese, direct your edits to `src/data/prompt_zh.json`.
+- Presently, the user-end system is already integrated with a communal backend infrastructure. Should the need arise, you have the autonomy to establish your own backend, with pertinent interfaces located in the `src/api.js` file.
+
+`CodeUpdateHandler.py` is the script designed for bulk processing of multilingual deployments. Upon completing your alterations, execute `python CodeUpdateHandler.py`. It will, in accordance with the prescribed rules, partition the `prompt.json` into diverse languages and synchronize the principal page code as well as individual page code for the selected cues in each language.
